@@ -1,35 +1,27 @@
-// Login.js
 import React, { useState } from 'react';
-
+// import { useHistory } from 'react-router-dom';
 
 function Login() {
+  // const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you can perform authentication logic, such as validating username and password
     // For simplicity, I'll just check if the username and password match a predefined value
     if (username === 'example' && password === 'password') {
       setIsLoggedIn(true);
+      // Redirect to the dashboard
+      // history.push('/dashboard');
     } else {
       alert('Invalid username or password');
     }
   };
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
+  // Rest of the component code...
 
-  if (isLoggedIn) {
-    return (
-      <div>
-        <h1>Welcome, {username}!</h1>
-        <button onClick={handleLogout}>Logout</button>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit}>

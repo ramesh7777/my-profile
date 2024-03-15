@@ -3,8 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 
-
-function Navbar() {
+function Navbar({ isLoggedIn }) {
   return (
     <nav className="navbar">
       <ul className="navbar-nav">
@@ -17,9 +16,11 @@ function Navbar() {
         <li className="nav-item">
           <Link to="/contact" className="nav-link">Contact</Link>
         </li>
-        <li className="nav-item">
-          <Link to="/login" className="nav-link">Login</Link>
-        </li>
+        {isLoggedIn ? (
+          <li><Link to="/dashboard">Dashboard</Link></li>
+        ) : (
+          <li><Link to="/login">Login</Link></li>
+        )}
         <li className="nav-item">
           <Link to="/register" className="nav-link">Register</Link>
         </li>

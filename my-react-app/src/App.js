@@ -6,6 +6,8 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Login from './components/Login';
 import Register from './components/Register';
+import Dashboard from './Dashboard'; // Import the Dashboard component
+import Footer from './Footer';
 
 
 function App() {
@@ -19,9 +21,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} /> {/* Define route for the dashboard */}
         </Routes>
       </div>
     </Router>
+
   );
 }
 

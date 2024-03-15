@@ -14,7 +14,7 @@ function Register() {
     console.log('Username:', username);
     console.log('Email:', email);
     console.log('Password:', password);
-    console.log('Confirm Password:', confirmPassword);
+    console.log('Confirm Password:', confirmPassword);     
   };
 
   return (
